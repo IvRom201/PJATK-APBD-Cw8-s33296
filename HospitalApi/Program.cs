@@ -11,7 +11,7 @@ builder.Services.AddOpenApi();
 builder.Services.AddDbContext<MasterContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-builder.Services.AddScoped<IPatientsService, PatientsService>();
+builder.Services.AddScoped<IPatientService, PatientService>();
 
 var app = builder.Build();
 
